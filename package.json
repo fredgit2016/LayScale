@@ -1,0 +1,12 @@
+{
+  "name": "lay-scale",
+  "version": "1.0.0",
+  "description": "A simple App allowing to record monthly your score in the lay scale",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start"
+  },
+  "keywords": [],
+  "author": "le-gac.frederic@laposte.net",
+  "license": "ISC"
+}
