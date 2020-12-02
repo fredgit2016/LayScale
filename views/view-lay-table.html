@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lay Table</title>
+  <style src="./view-lay-table.css">
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <h2>Echelle de proscratination générale de Lay</h2>
+    </div>
+    <div>
+      <table>
+        <tr v-for="(item,index) in intitules">
+          <th>{{ item.message }}</th>
+          <th v-for="number in numbers">
+            <input type="radio" v-bind:id="`cv${number}_${index}`" v-bind:name="`score_${index}`">
+          </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        intitules: [
+          { message: "Je me retrouve souvent à faire des choses que j'avais déjà l'intention de faire des jours auparavant." },
+          { message: "Je rate souvent des concerts, des évènements sportifs, ou des évènements similaires, parce que je n'achète pas les billets à temps." },
+          { message: "Quand je prévois une réception, j'organise les choses à l'avance.*" },
+          { message: "Quand c'est l'heure de se lever le matin, le plus souvent je sors directement du lit.*" },
+          { message: "Après que j'ai écrit une lettre, celle-ci peut attendre plusieurs jours avant d'être postée." },
+          { message: "Généralement je rappelle rapidement les gens au téléphone.*" },
+          { message: "Même pour les choses qui ne demandent guère que de se poser un instant pour être faites, je constate qu'elles sont rarement faites." },
+          { message: "Je prends généralement les décisions dès que possible.*" },
+          { message: "Je reporte généralement avant de commencer le travail que j'ai à faire." },
+          { message: "En voyage, c'est habituellement dans la précipitation que je me prépare pour arriver à l'aéroport ou à la gare." },
+          { message: "Quand je m'apprête à partir, je suis rarement obligé de faire quelque chose à la dernière minute.*" },
+          { message: "A l'approche de certaines échéances, je perds souvent du temps à faire autre chose." },
+          { message: "Si une facture d'un faible montant arrive, je la règle tout de suite.*" },
+          { message: "Je réponds habituellement très rapidement aux demandes portant la mention \"RSVP\".*" },
+          { message: "Je termine souvent une tâche plus tôt que nécessaire.*" },
+          { message: "Je semble toujours boucler les achats des cadeaux d'anniversaire au dernier moment." },
+          { message: "En général, même pour les choses essentielles j'achète à la dernière minute." },
+          { message: "En général, je réalise les choses que j'ai prévu de faire dans la journée.*" },
+          { message: "Je répète sans cesse, \"Je le ferai demain\"." },
+          { message: "Je m'occupe généralement de tout ce qui doit être fait avant de me poser et de me relaxer pour la soirée.*" }
+        ],
+        numbers: [1, 2, 3, 4, 5]
+      }
+    })
+  </script>
+</body>
+
+</html>
